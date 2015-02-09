@@ -1827,7 +1827,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
 #endif
 
     /** Animate switches between menus etc. */  
-    #define UI_ANIMATION true    ////*** Horizontal move into effect   
+    #define UI_ANIMATION false    ////*** Horizontal move into effect   
 
     /** How many ms should a single page be shown, until it is switched to the next one.*/
     #define UI_PAGES_DURATION 4000
