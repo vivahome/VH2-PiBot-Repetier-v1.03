@@ -94,7 +94,7 @@ To override EEPROM settings with config settings, set EEPROM_MODE 0
 // Sanguish Beta                = 501
 
 #if MOTHERBOARD!=314 || MOTHERBOARD!=315 || MOTHERBOARD!=316
-#define MOTHERBOARD 316
+#define MOTHERBOARD 315
 #endif
 #include "pins.h"
 
@@ -1531,7 +1531,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     the next command. Not receiving it will cause your printer to stop. Sending this string every
     second, if our queue is empty should prevent this. Comment it, if you don't wan't this feature. */
 #if PiBot
-#define WAITING_IDENTIFIER "PIRD"   ///////*****wait->PIRD:PiBot Ready
+#define WAITING_IDENTIFIER "PiBot VH2 ready"   ///////*****wait->PIRD:PiBot Ready
 #else
 #define WAITING_IDENTIFIER "wait"  
 #endif
@@ -1814,20 +1814,20 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     6 = Swedish
     */
     #if PiBot
-	#define UI_LANGUAGE 0
+	#define UI_LANGUAGE 1
 	#else
     #define UI_LANGUAGE 1
 	#endif
     // This is line 2 of the status display at startup. Change to your like.
 #ifndef UI_PRINTER_NAME
-    #define UI_PRINTER_NAME "PiBot 3D"
+    #define UI_PRINTER_NAME "PiBot VH2 3D"
 #endif
 #ifndef UI_PRINTER_COMPANY
     #define UI_PRINTER_COMPANY "BanDao ELE"
 #endif
 
     /** Animate switches between menus etc. */  
-    #define UI_ANIMATION false    ////*** Horizontal move into effect   
+    #define UI_ANIMATION true    ////*** Horizontal move into effect   
 
     /** How many ms should a single page be shown, until it is switched to the next one.*/
     #define UI_PAGES_DURATION 4000
