@@ -11,13 +11,13 @@
 // 4(decade)=100(binary): A5 A2 A0(physical); 5=101: A5 A2 A1; 6=110: A5 A3 A0; 7=111: A5 A3 A1; Other integer=0.
 #define Thermistor_Solution            0                ///***PiBot Controller Rev2.0 sensor channel choose, skip this for other boards.
 //#################### axis max length ####################################
-#define X_MAX_LENGTH                   220              ///***X Axis Size mm
-#define Y_MAX_LENGTH                   200              ///***Y Axis Size mm
-#define Z_MAX_LENGTH                   165              ///***Z Axis Size mm
+#define X_MAX_LENGTH                   360              ///***X Axis Size mm
+#define Y_MAX_LENGTH                   300              ///***Y Axis Size mm
+#define Z_MAX_LENGTH                   260              ///***Z Axis Size mm
 //#################### steps /mm ########################################
-#define XAXIS_STEPS_PER_MM             64          ///***X steps/mm
-#define YAXIS_STEPS_PER_MM             64           ///***Y steps/mm
-#define ZAXIS_STEPS_PER_MM             2133.333         ///***Z steps/mm
+#define XAXIS_STEPS_PER_MM             80          ///***X steps/mm
+#define YAXIS_STEPS_PER_MM             160           ///***Y steps/mm
+#define ZAXIS_STEPS_PER_MM             66.66         ///***Z steps/mm
 //#################### direction invert #####################################
 #define INVERT_X_DIR                   false            ///***Change the direction by false or true
 #define INVERT_Y_DIR                   false            ///***Change the direction by false or true
@@ -25,15 +25,15 @@
 //#################### Endstop option #####################################
 #define X_MODEL_ENDSTOP                mechanical          ///***Endstop Type: mechanical or optical (X min max)
 #define Y_MODEL_ENDSTOP                mechanical          ///***Endstop Type: mechanical or optical (Y min max)
-#define Z_MODEL_ENDSTOP                mechanical          ///***Endstop Type: mechanical or optical (Z min max)
+#define Z_MODEL_ENDSTOP                optical          ///***Endstop Type: mechanical or optical (Z min max)
 #define NUM_ENDSTOP                    Six            ///***Endstop Number: six  or  three  
 //#################### home direction invert #####################################
-#define X_HOME_DIR                     -1               ///***Change the direction by -1 (min) or 1 (max)
+#define X_HOME_DIR                     1               ///***Change the direction by -1 (min) or 1 (max)
 #define Y_HOME_DIR                     -1               ///***Change the direction by -1 (min) or 1 (max)
 #define Z_HOME_DIR                     -1               ///***Change the direction by -1 (min) or 1 (max)
 //#################### extruder options ####################################
 #define NUM_EXTRUDER                   1                ///****extruder number
-#define EXT0_STEPS_PER_MM              120              ///***E1 steps/mm
+#define EXT0_STEPS_PER_MM              90              ///***E1 steps/mm
 #define EXT1_STEPS_PER_MM              120              ///***E2 steps/mm (if none, E2 copy the E1 data)
 #define EXT0_INVERSE                   true             ///***E1 direction          
 #define EXT1_INVERSE                   false            ///***E1 direction  (if none, copy the E1 data)

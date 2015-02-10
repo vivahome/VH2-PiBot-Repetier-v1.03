@@ -956,7 +956,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
 #endif
 	
 // Set the values true where you have a hardware endstop. The Pin number is taken from pins.h.
-#if NUM_ENDSTOP   /////****max and min
+#if NUM_ENDSTOP  /////****max and min
 #define MIN_HARDWARE_ENDSTOP_X true
 #define MAX_HARDWARE_ENDSTOP_X true  
 
@@ -965,7 +965,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
 
 #define MIN_HARDWARE_ENDSTOP_Z true 
 #define MAX_HARDWARE_ENDSTOP_Z true  
-#else    /////****three min endstop
+#else NUM_ENDSTOP    /////****three min endstop
 #define MIN_HARDWARE_ENDSTOP_X true
 #define MAX_HARDWARE_ENDSTOP_X false 
 
@@ -1038,7 +1038,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
 	#else
 	#define max_software_endstop_r true
 	#endif
-#if SixEndstop
+#if NUM_ENDSTOP
 	//If true, axis won't move to coordinates less than zero.  ///***  Open always check
 	#define min_software_endstop_x false
 	#define min_software_endstop_y false
@@ -1531,7 +1531,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     the next command. Not receiving it will cause your printer to stop. Sending this string every
     second, if our queue is empty should prevent this. Comment it, if you don't wan't this feature. */
 #if PiBot
-#define WAITING_IDENTIFIER "VH2 ready"   ///////*****wait->PIRD:PiBot Ready
+#define WAITING_IDENTIFIER "VH2 ready Tmp: %ec"   ///////*****wait->PIRD:PiBot Ready
 #else
 #define WAITING_IDENTIFIER "wait"  
 #endif
@@ -1839,8 +1839,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     #define UI_DISABLE_AUTO_PAGESWITCH true
 
     /** Time to return to info menu if x millisconds no key was pressed. Set to 0 to disable it. */
-    // #define UI_AUTORETURN_TO_MENU_AFTER 30000
-	#define UI_AUTORETURN_TO_MENU_AFTER 0  // geändert auf = um zu sehen ob das dauernde Resetten nach 27,5 sec verschwindet
+    #define UI_AUTORETURN_TO_MENU_AFTER 30000
 
     #define FEATURE_UI_KEYS 1
 
