@@ -43,10 +43,10 @@
 //#################### heated bed options ###################################
 #define HAVE_HEATED_BED                true             ///****Heated Bed 
 //#################### LCD options ########################################
-#define UI_PRINTER_NAME                "PiBot3DVH2" ///****input your Logo string
+#define UI_PRINTER_NAME                "3DVH2" ///****input your Logo string
 #define UI_PRINTER_COMPANY             "VivaHome"         ///****input your company name
-#define DispReady                      "PiBotVH2 ready"    ///****input your machine ready string
-#define DispIdel                       "PiBotVH2 idle"     ///****input your machine Idle string
+#define DispReady                      "VH2 ready"    ///****input your machine ready string
+#define DispIdel                       "VH2 idle"     ///****input your machine Idle string
 //## Delta options (skip this,if your don't building the delta printer)############################
 #define DELTA                          false            ///***define Delta printer                      
 #define DELTA_AXIS_STEPS_PER_MM        80               ///***steps/mm for Delta Stepper Motor(three motor with same parameters)
