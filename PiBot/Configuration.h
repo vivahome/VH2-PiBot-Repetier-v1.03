@@ -1531,7 +1531,7 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     the next command. Not receiving it will cause your printer to stop. Sending this string every
     second, if our queue is empty should prevent this. Comment it, if you don't wan't this feature. */
 #if PiBot
-#define WAITING_IDENTIFIER "PiBot VH2 ready"   ///////*****wait->PIRD:PiBot Ready
+#define WAITING_IDENTIFIER "VH2 ready"   ///////*****wait->PIRD:PiBot Ready
 #else
 #define WAITING_IDENTIFIER "wait"  
 #endif
@@ -1839,7 +1839,8 @@ If a motor turns in the wrong direction change INVERT_X_DIR or INVERT_Y_DIR.
     #define UI_DISABLE_AUTO_PAGESWITCH true
 
     /** Time to return to info menu if x millisconds no key was pressed. Set to 0 to disable it. */
-    #define UI_AUTORETURN_TO_MENU_AFTER 30000
+    // #define UI_AUTORETURN_TO_MENU_AFTER 30000
+	#define UI_AUTORETURN_TO_MENU_AFTER 0  // geändert auf = um zu sehen ob das dauernde Resetten nach 27,5 sec verschwindet
 
     #define FEATURE_UI_KEYS 1
 
