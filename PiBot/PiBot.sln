@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PiBot", "PiBot.vcxproj", "{014AD1FF-3871-4833-BC4D-7AF8A076E069}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{014AD1FF-3871-4833-BC4D-7AF8A076E069}.Debug|Win32.ActiveCfg = Debug|Win32
+		{014AD1FF-3871-4833-BC4D-7AF8A076E069}.Debug|Win32.Build.0 = Debug|Win32
+		{014AD1FF-3871-4833-BC4D-7AF8A076E069}.Release|Win32.ActiveCfg = Release|Win32
+		{014AD1FF-3871-4833-BC4D-7AF8A076E069}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
