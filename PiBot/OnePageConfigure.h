@@ -62,6 +62,8 @@
 #define Z_PROBE_Y3                     110   			 //   * P2(X2,Y2)
 #define Z_PROBE_X_OFFSET               35 	             ///******distance of senser and extruder in X axis    extr1(0,0) * -------| X_Offset
 #define Z_PROBE_Y_OFFSET               -15                ///******distance of senser and extruder in Y axis                  Y_Offset  * (X_Offset,Y_Offset)
+//###########################VH2 options ##################################
+#define VH2_MESSAGE					  true               /// ongoing message output to serial port? 
 
 #endif
 

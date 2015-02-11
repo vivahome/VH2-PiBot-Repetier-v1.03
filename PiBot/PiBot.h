@@ -25,7 +25,6 @@
 
 #ifndef _PIBOT_H
 #define _PIBOT_H
-
 // ##########################################################################################
 // ##                    PiBot options
 // ##########################################################################################
@@ -486,6 +485,5 @@ extern int debugWaitLoop;
 #define XSTR(s) STR(s)
 #include "Commands.h"
 #include "Eeprom.h"
-
 #endif
 
