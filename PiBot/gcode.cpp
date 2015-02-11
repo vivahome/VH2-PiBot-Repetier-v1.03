@@ -320,11 +320,22 @@ void GCode::readFromSerial()
         }
 #ifdef WAITING_IDENTIFIER
         else if(bufferLength == 0 && time-timeOfLastDataPacket>1000)   // Don't do it if buffer is not empty. It may be a slow executing command.
-        {
-            Com::printFLN(Com::tWait); // Unblock communication in case the last ok was not received correct.
-            timeOfLastDataPacket = time;
-        }
+		{
+			if (VH2_MESSAGE==true)
+			 {
+            Com::printFLN(Com::tWait);// Unblock communication in case the last ok was not received correct.
+            // timeOfLastDataPacket = time;
+			}
+			else            
+			{		
+		    Commands::printTemperatures(true);
+			Commands::reportPrinterUsage();//merken hinzugefügt VE
+			}			
+			            timeOfLastDataPacket = time;
+	}
+		
 #endif
+		
     }
     while(HAL::serialByteAvailable() && commandsReceivingWritePosition < MAX_CMD_SIZE)    // consume data until no data or buffer full
     {

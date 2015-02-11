@@ -25,7 +25,6 @@
 
 
 #include "PiBot.h"
-
 #if defined(USE_ADVANCE)
 uint8_t Printer::minExtruderSpeed;            ///< Timer delay for start extruder speed
 uint8_t Printer::maxExtruderSpeed;            ///< Timer delay for end extruder speed
@@ -512,6 +511,7 @@ uint8_t Printer::setDestinationStepsFromGCode(GCode *com)
 
 void Printer::setup()
 {
+	
     HAL::stopWatchdog();
 #if FEATURE_CONTROLLER==5
     HAL::delayMilliseconds(100);

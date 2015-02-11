@@ -50,7 +50,9 @@ union floatLong {
 class Printer
 {
 public:
-#if defined(USE_ADVANCE)
+	
+
+	#if defined(USE_ADVANCE)
     static volatile int extruderStepsNeeded; ///< This many extruder steps are still needed, <0 = reverse steps needed.
     static uint8_t minExtruderSpeed;            ///< Timer delay for start extruder speed
     static uint8_t maxExtruderSpeed;            ///< Timer delay for end extruder speed

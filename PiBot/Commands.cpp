@@ -25,7 +25,6 @@
 
 
 #include "PiBot.h"
-
 const int sensitive_pins[] PROGMEM = SENSITIVE_PINS; // Sensitive pin list for M42
 int Commands::lowestRAMValue = MAX_RAM;
 int Commands::lowestRAMValueSend = MAX_RAM;
@@ -149,7 +148,7 @@ void Commands::printCurrentPosition()
     //Com::printF(PSTR("OffX:"),Printer::offsetX); // to debug offset handling
     //Com::printFLN(PSTR(" OffY:"),Printer::offsetY);
 }
-void Commands::printTemperatures(bool showRaw)
+void Commands::printTemperatures(bool showRaw)  //merken
 {
     float temp = Extruder::current->tempControl.currentTemperatureC;
 #if HEATED_BED_SENSOR_TYPE==0
@@ -950,6 +949,12 @@ void Commands::executeGCode(GCode *com)
         case 105: // M105  get temperature. Always returns the current temperature, doesn't wait until move stopped
             printTemperatures(com->hasX());
             break;
+		case 720:  //einschalten VH2 Messasge
+			printCurrentPosition();
+			break;
+		case 721:  //einschalten WAITING_IDENTIFIER
+			Com::print("Hello");
+						break;
         case 109: // M109 - Wait for extruder heater to reach target.
 #if NUM_EXTRUDER>0
         {
